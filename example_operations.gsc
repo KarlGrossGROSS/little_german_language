@@ -1,0 +1,51 @@
+[
+    "abfolge",
+    ["setzen", "alpha", ["addieren", 5, 5]],
+    ["drucken", ["abrufen", "alpha"]],
+    ["setzen", "beta",["subtrahieren", ["abrufen", "alpha"], 1]],
+    ["drucken", ["abrufen", "beta"]],
+    ["setzen", "result1", ["multiplizieren", ["abrufen", "alpha"], ["abrufen", "beta"]]],
+    ["drucken", ["abrufen", "result1"]],
+    ["setzen", "divisionresult", ["dividieren", ["abrufen", "result1"], 5]],
+    ["drucken", ["abrufen", "divisionresult"]],
+    ["setzen", "potenzresult", ["potenzieren",["abrufen", "divisionresult"], 2]],
+    ["drucken", ["abrufen", "potenzresult"]],
+    ["setzen", "array1", ["kreieren_array", 10]],
+    ["setzen_array_wert", ["abrufen", "array1"], 0, "alpha"],
+    ["setzen_array_wert", ["abrufen", "array1"], 1, ["abrufen", "alpha"]],
+    ["setzen_array_wert", ["abrufen", "array1"], 2, "beta"],
+    ["setzen_array_wert", ["abrufen", "array1"], 3, ["abrufen", "beta"]],
+    ["setzen_array_wert", ["abrufen", "array1"], 4, "result1"],
+    ["setzen_array_wert", ["abrufen", "array1"], 5, ["abrufen", "result1"]],
+    ["setzen_array_wert", ["abrufen", "array1"], 6, "divisionresult"],
+    ["setzen_array_wert", ["abrufen", "array1"], 7, ["abrufen","divisionresult"]],
+    ["setzen_array_wert", ["abrufen", "array1"], 8, "potenzresult"],
+    ["setzen_array_wert", ["abrufen", "array1"], 9, ["abrufen", "potenzresult"]],
+    ["drucken", ["abrufen", "array1"]],
+    ["setzen_array_wert", ["abrufen", "array1"], 0, "First_argument"],
+    ["drucken", ["array_standort", ["abrufen", "array1"], 0]],
+    ["drucken", ["abrufen", "array1"]],
+    ["setzen", "counter", -1],
+    ["waehrend", 0, "<", 10, ["drucken", ["array_standort", ["abrufen", "array1"], ["setzen", "counter", ["addieren", ["abrufen", "counter"], 1]]]]],
+    ["setzen", "dict1", ["wortb",
+    "a",1,
+    "b",2,
+    "c", 3
+]],
+    ["drucken", ["abrufen", "dict1"]],
+    ["drucken", ["wortb_wert", ["abrufen", "dict1"], "a"]],
+    ["wortb_wert_setzen", ["abrufen", "dict1"], "a", 10],
+    ["drucken", ["abrufen", "dict1"]],
+    ["setzen", "dict2", ["wortb",
+    "a",1,
+    "b",2,
+    "c", 3,
+    "d", 4,
+    "d", 5
+]],
+    ["wortb_zusammenfuehren", ["abrufen", "dict1"], ["abrufen", "dict2"], "|"]
+
+
+
+]
+
